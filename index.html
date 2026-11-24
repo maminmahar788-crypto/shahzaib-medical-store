@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Shahzaib Medical Store – Management System</title>
+<script src="xlsx.full.min.js" onerror="var s=document.createElement('script');s.src='https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js';document.head.appendChild(s)"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="locked">
+<div class="top"><button onclick="document.querySelector('aside').classList.toggle('open')">☰</button><span id="tn">Shahzaib Medical Store</span><button style="margin-left:auto" onclick="toggleTheme()">🌓</button><button onclick="logout()">🚪</button></div>
+<div class="app">
+<aside>
+<div class="logo"><i>⚕</i><span id="sn">Shahzaib Medical Store</span></div>
+<nav id="nav"></nav>
+<div style="padding:14px 8px;font-size:11px;color:#a7d8d0">👤 <span id="who"></span><br>Professional Store Management</div>
+</aside>
+<main id="main"></main>
+</div>
+<div id="login"><div class="lbox"><div class="lbrand"><i>⚕</i><h1 id="ln">Shahzaib Medical Store</h1><p>Store Management System · Secure Login</p></div>
+<div id="lform"><label>Username</label><input id="lu" autocomplete="username" placeholder="Enter username">
+<label>Password</label><div class="pw"><input id="lp" type="password" autocomplete="current-password" placeholder="Enter password"><button type="button" onclick="showPw()" aria-label="Show password">👁</button></div>
+<label class="chk"><input type="checkbox" id="lr"> Remember me on this device</label><div id="lerr"></div>
+<button class="btn" id="lb" onclick="doLogin()">🔐 Login</button><a href="#" onclick="forgot();return false">Forgot password?</a></div>
+<p class="lf" id="lhint">First time login: <b>admin</b> / <b>admin123</b><br>Please change it from Settings after login.</p></div></div>
+<div class="modal" id="modal"><div class="mb" id="mb"></div></div>
+<div id="printArea"></div>
+<script src="app.js"></script>
+</body>
+</html>
